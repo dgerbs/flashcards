@@ -1,18 +1,18 @@
 puts "\nWelcome to Flashcards!\n"
 
 card1 = {
-  "front" => "cat",
-  "back" => "neko"
+  front: "cat",
+  back: "neko"
 }
 card2 = {
-  "front" => "dog",
-  "back" => "inu"
+  front: "dog",
+  back: "inu"
 }
 deck = [card1, card2]
 
 deck.each do |card|
-  front = card["front"]
-  back = card["back"]
+  front = card[:front]
+  back = card[:back]
   
   print "\n#{front} > "
   guess = gets.chomp
