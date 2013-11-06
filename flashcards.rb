@@ -9,12 +9,34 @@ class Card
   end
 end
 
-card1 = Card.new("cat", "neko")
-card2 = Card.new("dog", "inu")
+class Deck
+  attr_accessor :cards
+  def initialize(name)
+    @name = name
+    @cards = []
+  end
 
-deck = [card1, card2]
+  def <<(card)
+    @cards << card
+  end
 
-deck.each do |card|
+  def shuffle
+    @cards.shuffle!
+  end
+end
+
+card1 = Card.new("cat", "die Katze")
+card2 = Card.new("dog", "der Hund")
+card3 = Card.new("bird", "die Vögel")
+
+deck = Deck.new("German")
+deck <<(card1)
+deck <<(card2)
+deck <<(card3)
+
+deck.shuffle
+
+deck.cards.each do |card|
   front = card.front
   back = card.back
 
