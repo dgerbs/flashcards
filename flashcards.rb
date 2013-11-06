@@ -11,7 +11,7 @@ class Game
 
   def play
     display_decks
-    puts "Pick a deck: "
+    print "Pick a deck: "
     deck = retrieve_deck
     deck.play
   end
