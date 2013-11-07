@@ -1,4 +1,4 @@
-puts "\nWelcome to Language Flashcards!\n"
+puts "\nWelcome to Language Flashcards!\n\n"
 
 class Game
   def initialize
@@ -11,7 +11,7 @@ class Game
 
   def play
     display_decks
-    print "Pick a deck: "
+    print "\nPick a deck: "
     deck = retrieve_deck
     deck.play
   end
@@ -43,12 +43,12 @@ class Card
   end
 
   def play
-    puts "\n#{front} > "
+    print "\n#{front} > "
     guess = gets.chomp
     if correct? guess
-      puts "Correct!"
+      puts "Correct!\n"
     else
-      puts "Incorrect. The answer is: #{back}."
+      puts "Incorrect. The answer is: #{back}.\n"
     end
   end
 end
