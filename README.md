@@ -1,2 +1,1 @@
-== This is...
-Object oriented approach to language flashcards.
+An object oriented approach to language flashcards.
